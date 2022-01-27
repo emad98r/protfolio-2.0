@@ -1,0 +1,111 @@
+.trining-cos {
+  height: 100vh;
+  background-color: $black-color;
+  scroll-snap-align: start;
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3em;
+    height: 100%;
+    article {
+      h1 {
+        font-size: 3em;
+        color: $main-color;
+        font-family: $secondry-font;
+        font-weight: 400;
+        border-bottom: 2px solid $main-color;
+        margin-bottom: 1em;
+      }
+      ul {
+        color: $white-color;
+        font-family: $main-font;
+        font-size: 1.3em;
+        li {
+          padding: 0.5em 0 0.5em 2em;
+          position: relative;
+          word-spacing: 3px;
+          opacity: 0;
+          transition: 0.5s;
+          -webkit-transition: 0.5s;
+          -moz-transition: 0.5s;
+          -ms-transition: 0.5s;
+          -o-transition: 0.5s;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 1.1em;
+            height: 1.1em;
+            background-color: $blue-color;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+    img {
+      width: 60%;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .trining-cos {
+    height: auto;
+    padding: 1.5em 0;
+    .container {
+      flex-direction: column;
+      height: auto;
+      padding: 1em;
+      article {
+        h1 {
+          font-size: 2em;
+        }
+        ul {
+          li {
+            padding-left: 2.5em;
+            &::before {
+              margin-left: 1em;
+            }
+          }
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 920px) {
+  .trining-cos {
+    height: auto;
+    padding: 1.5em 0;
+    .container {
+      flex-direction: column;
+      padding: 1em;
+      height: auto;
+      article {
+        h1 {
+          font-size: 2em;
+        }
+        ul {
+          li {
+            padding-left: 2.5em;
+            &::before {
+              margin-left: 1em;
+            }
+          }
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+.contact-me {
+  display: block;
+  background-image: linear-gradient(
+    to top,
+    $black-color 65%,
+    $main-color 65% 100%
+  );
+  height: auto;
+  padding: 5em 0 2em;
+  .container {
+    background-color: $white-color;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    position: relative;
+    #backBut {
+      background-color: $black-color;
+      padding: 1em;
+      position: absolute;
+      cursor: pointer;
+      top: 10%;
+      left: -5%;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      &:hover {
+        background-color: $blue-color;
+      }
+      animation: moving 0.7s ease-in infinite alternate-reverse;
+      -webkit-animation: moving 0.7s ease-in infinite alternate-reverse;
+    }
+    .big-img {
+      width: 50%;
+      border-radius: 15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      -o-border-radius: 15px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      h1 {
+        font-size: 3em;
+        color: $main-color;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: 1em 0;
+      }
+      input {
+        border: none;
+        border-bottom: 2px solid $blue-color;
+        height: 3em;
+        width: 80%;
+        padding: 0 1em;
+        font-family: $main-font;
+        font-size: 1.1em;
+        background-color: $gray-color;
+        margin-bottom: 0.5em;
+        &:focus {
+          outline: none;
+          background-color: $blue-color;
+          color: $white-color;
+        }
+      }
+      textarea {
+        border: none;
+        width: 80%;
+        padding: 1em 1em 0;
+        font-family: $main-font;
+        font-size: 1.1em;
+        border-bottom: 2px solid $blue-color;
+        background-color: $gray-color;
+        &:focus {
+          outline: none;
+          background-color: $blue-color;
+          color: $white-color;
+        }
+      }
+      button {
+        width: 30%;
+        background-color: $blue-color;
+        color: $white-color;
+        font-family: $main-font;
+        padding: 1em;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        margin: 0.5em 0;
+        font-size: 1.1em;
+
+        &:hover {
+          background-color: $main-color;
+          color: $black-color;
+        }
+      }
+    }
+  }
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-me {
+    padding: 2em 0.5em;
+    .container {
+      flex-direction: column;
+      #backbut {
+        width: 15%;
+      }
+      .big-img {
+        width: 100%;
+      }
+      form {
+        h1 {
+          text-align: center;
+          width: 100%;
+        }
+        width: 100%;
+        align-items: flex-start;
+        input,
+        textarea {
+          width: 100%;
+        }
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 920px) {
+  .contact-me {
+    padding: 2em 0.5em;
+    .container {
+      flex-direction: column;
+      align-items: center;
+      padding: 1em 0;
+      #backBut {
+        width: 10%;
+        left: -1%;
+      }
+      .big-img {
+        width: 30%;
+        height: 10%;
+      }
+      form {
+        width: 80% !important;
+        h1 {
+          text-align: center;
+          width: 100%;
+        }
+        width: 100%;
+        align-items: flex-start;
+        input,
+        textarea {
+          width: 100%;
+        }
+        button {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

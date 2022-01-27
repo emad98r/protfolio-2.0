@@ -1,0 +1,92 @@
+.what-i-provide {
+  background-image: url("../images/servises\ bg.jpg");
+  background-position: center;
+  scroll-snap-align: start;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    .title {
+      font-size: 3em;
+      font-family: $sub-font;
+      font-weight: 400;
+      color: $main-color;
+      text-transform: uppercase;
+      margin: 2em 0 1em;
+      border-bottom: 2px solid $main-color;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+      width: 50%;
+      gap: 1.5em 2em;
+      margin-bottom: 2em;
+      .service {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        background-color: $white-color;
+        padding: 2em 1.5em;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        box-shadow: 0 1px 5px gray;
+        transition: 1s;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        opacity: 0;
+
+        img {
+          width: 40%;
+          margin-bottom: 0.5em;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          background-color: $gray-color;
+          padding: 1em;
+        }
+        h1 {
+          font-size: 1.7em;
+          font-weight: 400;
+          font-family: $main-font;
+          margin-bottom: 1em;
+          color: $black-color;
+        }
+        p {
+          width: 30ch;
+          font-family: $main-font;
+          font-weight: 400;
+          padding: 0 1em;
+          word-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .what-i-provide {
+    .container {
+      .services {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 920px) {
+  .what-i-provide {
+    .container {
+      .services {
+        width: 100%;
+      }
+    }
+  }
+}
